@@ -2,3 +2,4 @@ venv
 .vscode
 app_credentials
 __pycache__
+crawlerdata.db
