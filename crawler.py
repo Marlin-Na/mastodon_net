@@ -147,8 +147,7 @@ class FriendshipCrawler:
     def reschedule_failed_users(self):
         for key, value in self.failed_users.items():
             self.wait_queue[key] = value
-        for key in self.failed_users:
-            del self.failed_users[key]
+        self.failed_users.clear()
     @classmethod
     def restore_from_persistent(cls):
         ans = cls()
