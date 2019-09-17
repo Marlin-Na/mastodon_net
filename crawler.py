@@ -145,10 +145,9 @@ class FriendshipCrawler:
             print("==== wait_queue is empty ====")
             time.sleep(1)
     def reschedule_failed_users(self):
-        for key, value in self.failed_users:
-            print("?????")
-            print(key, value)
+        for key, value in self.failed_users.items():
             self.wait_queue[key] = value
+        for key in self.failed_users:
             del self.failed_users[key]
     @classmethod
     def restore_from_persistent(cls):
