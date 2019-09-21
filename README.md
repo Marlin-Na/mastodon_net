@@ -43,10 +43,6 @@ making four or more requests per second (followers and followings).
 The time is mainly bounded by the limit of Mastodon API rate per
 user account.
 
-(c) Screen Shots of your Web Crawler’s Command lines or GUIs
-
-(d) Write a summary report on your design and measurement results.
-
 ## Implementation details
 
 The program will fetch data for the initial user and add its followers
@@ -71,3 +67,8 @@ It may be improved with:
   use multiple threads (one thread for one instance/account) to make the
   requests.
   It will require a thread-safe job queue implementation (e.g. Python's queue module).
+
+------------------
+
+CS 6220 homework @ Georgia Tech
+
