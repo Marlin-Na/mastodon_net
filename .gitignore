@@ -4,3 +4,4 @@ app_credentials
 __pycache__
 crawlerdata.db
 crawlerjob.log
+data
