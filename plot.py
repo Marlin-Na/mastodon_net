@@ -4,7 +4,10 @@ import matplotlib as mp
 import matplotlib.pyplot as plt
 from datetime import datetime
 
-LOG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "crawlerjob.log")
+try:
+    LOG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "crawlerjob.log")
+except NameError:
+    LOG_FILE = os.path.join(".", "crawlerjob.log")
 
 def read_data():
     log_file = open(LOG_FILE, "r")
@@ -20,5 +23,8 @@ if __name__ == "__main__":
     success_count, queue_count, failed_count, time = list(zip(*read_data()))
     plt.plot(time, success_count, color = "green", label="Success count")
     plt.plot(time, queue_count,   color = "yellow", label="Queue count")
+    plt.xlabel("Date")
     plt.legend()
+    plt.savefig("plot.png")
     plt.show()
+
