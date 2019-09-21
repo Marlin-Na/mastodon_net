@@ -29,7 +29,7 @@ I runned a job for three days with two large instances
 (pawoo.net and mastodon.social). The following plot shows the count of
 successfully fetched users and users in the queue with regards to time.
 
-![plot](./plot.py)
+![plot](./plot.png)
 
 Since the current implementation will not propagate through nodes on instances
 that are not configured in `config.py`, the fetched data only contains a proportion
